@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SMC Smart Bank - Cards</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+
+<style>
+
+.card-container{
+padding:40px 0;
+}
+
+.bank-card{
+height:230px;
+border-radius:25px;
+padding:30px;
+position:relative;
+overflow:hidden;
+margin-bottom:30px;
+color:white;
+box-shadow:0 15px 40px rgba(0,0,0,.4);
+}
+
+.gold-card{
+background:linear-gradient(135deg,#000,#d4af37);
+}
+
+.black-card{
+background:linear-gradient(135deg,#000,#222,#444);
+}
+
+.virtual-card{
+background:linear-gradient(135deg,#0f172a,#1e293b,#334155);
+}
+
+.card-chip{
+width:60px;
+height:45px;
+background:gold;
+border-radius:8px;
+margin-bottom:20px;
+}
+
+.card-number{
+font-size:24px;
+letter-spacing:3px;
+margin-top:15px;
+}
+
+.card-name{
+position:absolute;
+bottom:25px;
+left:30px;
+}
+
+.card-brand{
+position:absolute;
+top:25px;
+right:25px;
+font-size:20px;
+font-weight:bold;
+}
+
+.action-box{
+background:#111827;
+padding:25px;
+border-radius:20px;
+margin-bottom:20px;
+}
+
+.action-btn{
+width:100%;
+margin-top:10px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark glass-nav">
+
+<div class="container">
+
+<a class="navbar-brand fw-bold" href="index.html">
+SMC SMART BANK
+</a>
+
+<button class="navbar-toggler"
+data-bs-toggle="collapse"
+data-bs-target="#menu">
+
+<span class="navbar-toggler-icon"></span>
+
+</button>
+
+<div class="collapse navbar-collapse" id="menu">
+
+<ul class="navbar-nav ms-auto">
+
+<li class="nav-item">
+<a class="nav-link" href="dashboard.html">Dashboard</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="transfer.html">Transfer</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="airtime.html">Airtime</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="data.html">Data</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link active" href="cards.html">Cards</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="profile.html">Profile</a>
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</nav>
+
+<div class="container card-container">
+
+<h2 class="text-center mb-5">
+My Cards
+</h2>
+
+<div class="row">
+
+<div class="col-lg-8">
+
+<div class="bank-card gold-card">
+
+<div class="card-brand">
+VISA
+</div>
+
+<div class="card-chip"></div>
+
+<div class="card-number">
+**** **** **** 4587
+</div>
+
+<div class="card-name">
+SMC PREMIUM
+</div>
+
+</div>
+
+<div class="bank-card black-card">
+
+<div class="card-brand">
+MASTERCARD
+</div>
+
+<div class="card-chip"></div>
+
+<div class="card-number">
+**** **** **** 9632
+</div>
+
+<div class="card-name">
+SMC ELITE
+</div>
+
+</div>
+
+<div class="bank-card virtual-card">
+
+<div class="card-brand">
+VIRTUAL USD
+</div>
+
+<div class="card-chip"></div>
+
+<div class="card-number">
+**** **** **** 7821
+</div>
+
+<div class="card-name">
+SMC DOLLAR CARD
+</div>
+
+</div>
+
+</div>
+
+<div class="col-lg-4">
+
+<div class="action-box">
+
+<h5>Card Controls</h5>
+
+<button class="btn btn-success action-btn"
+onclick="freezeCard(false)">
+Activate Card </button>
+
+<button class="btn btn-danger action-btn"
+onclick="freezeCard(true)">
+Freeze Card </button>
+
+</div>
+
+<div class="action-box">
+
+<h5>Request New Card</h5>
+
+<button class="btn btn-warning action-btn"
+onclick="requestCard()">
+
+Request Physical Card
+
+</button>
+
+</div>
+
+<div class="action-box">
+
+<h5>Card Limits</h5>
+
+<p>Daily Limit: ₦500,000</p>
+<p>Online Limit: ₦200,000</p>
+<p>ATM Limit: ₦150,000</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+function freezeCard(status){
+
+if(status){
+alert("Card Frozen Successfully");
+}else{
+alert("Card Activated Successfully");
+}
+
+}
+
+function requestCard(){
+
+alert(
+"Physical Card Request Submitted Successfully"
+);
+
+}
+
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
